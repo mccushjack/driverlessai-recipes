@@ -6,7 +6,7 @@ from sklearn.metrics import balanced_accuracy_score
 from sklearn.preprocessing import LabelEncoder
 
 
-class MyBrierLoss(CustomScorer):
+class balancedaccuracy(CustomScorer):
     _description = "Balanced Accuracy Score"
     _unsupervised = False  # ignores actual, uses predicted and X to compute metrics
     _regression = False
