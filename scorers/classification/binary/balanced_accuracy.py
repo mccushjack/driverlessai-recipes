@@ -8,6 +8,8 @@ from sklearn.preprocessing import LabelEncoder
 
 class MyBrierLoss(CustomScorer):
     _description = "Balanced Accuracy Score"
+    _unsupervised = False  # ignores actual, uses predicted and X to compute metrics
+    _regression = False
     _binary = True
     _multiclass = False
     _maximize = True
