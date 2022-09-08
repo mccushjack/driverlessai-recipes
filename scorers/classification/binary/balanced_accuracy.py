@@ -9,7 +9,7 @@ from sklearn.preprocessing import LabelEncoder
 class MyBrierLoss(CustomScorer):
     _description = "Balanced Accuracy Score"
     _binary = True
-    _multiclass = True
+    _multiclass = False
     _maximize = True
     _perfect_score = 1
     _supports_sample_weight = True  
