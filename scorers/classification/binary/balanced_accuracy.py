@@ -35,4 +35,4 @@ class balancedaccuracy(CustomScorer):
         lb = LabelEncoder()
         labels = lb.fit_transform(labels)
         actual = lb.transform(actual)
-        return balanced_accuracy_score(actual, predicted, sample_weight)
+        return balanced_accuracy_score(actual, labels, sample_weight)
