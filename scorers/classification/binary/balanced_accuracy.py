@@ -1,4 +1,4 @@
-"""Brier Loss"""
+"""balanced_accuracy_score"""
 import typing
 import numpy as np
 from h2oaicore.metrics import CustomScorer
@@ -13,7 +13,7 @@ class MyBrierLoss(CustomScorer):
     _binary = True
     _multiclass = False
     _maximize = True
-    _perfect_score = 1
+    _perfect_score = 1.0
     _supports_sample_weight = True  
     _display_name = "Balanced Accuracy"
     
