@@ -16,6 +16,15 @@ class MyBrierLoss(CustomScorer):
     _perfect_score = 1
     _supports_sample_weight = True  
     _display_name = "Balanced Accuracy"
+    
+    @staticmethod
+    def do_acceptance_test():
+        """
+        Whether to enable acceptance tests during upload of recipe and during start of Driverless AI.
+        Acceptance tests perform a number of sanity checks on small data, and attempt to provide helpful instructions
+        for how to fix any potential issues. Disable if your recipe requires specific data or won't work on random data.
+        """
+        return False
 
     def score(self,
               actual: np.array,
